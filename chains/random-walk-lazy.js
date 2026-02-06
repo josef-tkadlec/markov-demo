@@ -35,8 +35,8 @@ class LazyRandomWalk extends MarkovChain {
         initialDistribution[clampedStart] = 1.0;
 
         super({
-            name: "Random Walk",
-            description: `1D random walk with absorbing boundaries (p=${p.toFixed(2)} right, q=${q.toFixed(2)} left)`,
+            name: "Lazy Random Walk",
+            description: `Lazy 1D random walk with absorbing boundaries (p=${p.toFixed(2)} right, q=${q.toFixed(2)} left)`,
             states: states,
             stateNames: stateNames,
             transitionMatrix: transitionMatrix,
@@ -80,7 +80,7 @@ class LazyRandomWalk extends MarkovChain {
     updateProbability(newP) {
         this.p = newP;
         this.q = 0.8 - newP;
-        this.description = `1D random walk with absorbing boundaries (p=${newP.toFixed(2)} right, q=${this.q.toFixed(2)} left)`;
+        this.description = `Lazy 1D random walk with absorbing boundaries (p=${newP.toFixed(2)} right, q=${this.q.toFixed(2)} left)`;
 
         // Update transition matrix for 11 states
         const numStates = 11;
