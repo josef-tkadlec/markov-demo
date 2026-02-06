@@ -1,4 +1,4 @@
-class RandomWalk extends MarkovChain {
+class LazyRandomWalk extends MarkovChain {
     constructor(p = 0.5, startPos = 4) {
         const stay = 0.2;
 	const q = 0.8 - p;
@@ -192,4 +192,4 @@ class RandomWalk extends MarkovChain {
     }
 }
 
-chainModules.push(RandomWalk);
+chainModules.push(LazyRandomWalk);
