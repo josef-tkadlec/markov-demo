@@ -627,7 +627,7 @@ const MarkovChainVisualization = () => {
 
     return (
         <div className="container">
-            <h1>Vibecoded Markov Chain Demo</h1>
+            <h1>Markov Chain Demo (borrowed from Vasek Rozhon)</h1>
 
             <div className="main-content">
                 <ChainSelector chainModules={chainModules} selectedIndex={selectedChainIndex} onSelect={handleChainSelect} />
